@@ -1,0 +1,31 @@
+name: Robot Framework Testes Frontend
+ 
+on: push
+    
+jobs:
+  test:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Checkout Repository
+        # run: echo Fazendo clone do repositorio na maquina virtual
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        # run: echo Instalação das depedências do Projeto
+        run: |
+          pip install robotframework
+         
+          pip install robotframework-seleniumlibrary
+
+ 
+      - name: Run Robot Framework tests
+        # run: echo Executando os testes de API do Robot
+        run: |
+          robot  ./tests/
+      - name: Test Report
+        # run: echo Salvando o Report dos Testes
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-framework-report
+          path: results/**

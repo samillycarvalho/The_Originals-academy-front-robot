@@ -1,0 +1,1690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on linux)" generated="2024-05-11T16:08:21.003071" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/sami/academy/FRONTacademy/tests">
+<suite id="s1-s1" name="Login" source="/home/sami/academy/FRONTacademy/tests/login.robot">
+<test id="s1-s1-t1" name="CT01: Login de acesso" line="9">
+<kw name="Abrir o navegador" owner="FRONT" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:08:21.153266" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:08:21.153098" elapsed="72.068548"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-11T16:09:33.224027" elapsed="0.092199"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:08:21.152475" elapsed="72.164844"/>
+</kw>
+<kw name="Passo 1 - Acessar a página de login do academy" owner="FRONT">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:33.325369" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:33.322400" elapsed="0.455247"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:33.318922" elapsed="0.459579"/>
+</kw>
+<kw name="Passo 2 - Digitar mail" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:33.781203" elapsed="0.090108"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:33.872350" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//input[contains(@type,'text')]'.</msg>
+<arg>locator=${mailInput}</arg>
+<arg>text=${mailLogin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:33.871723" elapsed="0.117732"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:33.779577" elapsed="0.210088"/>
+</kw>
+<kw name="Passo 3 - Digitar uma senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:33.990648" elapsed="0.027878"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:34.020993" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-11T16:09:34.069196" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordinput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:34.019565" elapsed="0.084779"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:33.990149" elapsed="0.114311"/>
+</kw>
+<kw name="Passo 4 - Clicar em entrar" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomentrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:34.104966" elapsed="0.016532"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:34.121972" level="INFO">Clicking button '//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${buttomentrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:34.121709" elapsed="0.084735"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:34.104677" elapsed="0.101987"/>
+</kw>
+<kw name="Fechar o navegador" owner="FRONT" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-11T16:09:34.207668" elapsed="0.072161"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:34.207270" elapsed="0.072675"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:08:21.151896" elapsed="73.128136"/>
+</test>
+<test id="s1-s1-t2" name="CT02 - Digitar email inválido" line="15">
+<kw name="Abrir o navegador" owner="FRONT" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:34.281065" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:34.280918" elapsed="0.858564"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-11T16:09:35.140565" elapsed="0.113311"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:34.280656" elapsed="0.973765"/>
+</kw>
+<kw name="Passo 1 - Acessar a página de login do academy" owner="FRONT">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:35.261773" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:35.259727" elapsed="0.420584"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:35.256816" elapsed="0.423866"/>
+</kw>
+<kw name="Digitar email inválido de login" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:35.684185" elapsed="0.078040"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:35.762649" level="INFO">Typing text '' into text field '//input[contains(@type,'text')]'.</msg>
+<arg>locator=${mailInput}</arg>
+<arg>text=</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:35.762405" elapsed="0.054107"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:35.816923" elapsed="0.030789"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:35.848192" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-11T16:09:35.874047" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordinput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:35.847903" elapsed="0.081985"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:35.989272" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-29.png"&gt;&lt;img src="selenium-element-screenshot-29.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>locator=${telalogin}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-05-11T16:09:35.930150" elapsed="0.059588"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:35.682155" elapsed="0.308089"/>
+</kw>
+<kw name="Passo 3 - Digitar uma senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:35.991599" elapsed="0.030749"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:36.027277" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-11T16:09:36.075485" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordinput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:36.025117" elapsed="0.085956"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:35.990879" elapsed="0.120307"/>
+</kw>
+<kw name="Passo 4 - Clicar em entrar" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomentrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:36.111707" elapsed="0.015129"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:36.128022" level="INFO">Clicking button '//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${buttomentrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:36.127408" elapsed="0.064156"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:36.111395" elapsed="0.080273"/>
+</kw>
+<kw name="Fechar o navegador" owner="FRONT" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-11T16:09:36.192233" elapsed="0.070797"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:36.191936" elapsed="0.071276"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:34.280319" elapsed="1.983039"/>
+</test>
+<status status="PASS" start="2024-05-11T16:08:21.026523" elapsed="75.237415"/>
+</suite>
+<suite id="s1-s2" name="Logout" source="/home/sami/academy/FRONTacademy/tests/logout.robot">
+<test id="s1-s2-t1" name="CT01: Login de acesso" line="9">
+<kw name="Abrir o navegador" owner="FRONT" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:36.268282" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:36.268084" elapsed="0.800533"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-11T16:09:37.071491" elapsed="0.096238"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:36.267698" elapsed="0.900667"/>
+</kw>
+<kw name="Passo 1 - Acessar a página de login do academy" owner="FRONT">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:37.173017" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:37.172065" elapsed="0.445910"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:37.169974" elapsed="0.448384"/>
+</kw>
+<kw name="Passo 2 - Digitar mail" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:37.619945" elapsed="0.059571"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:37.679917" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//input[contains(@type,'text')]'.</msg>
+<arg>locator=${mailInput}</arg>
+<arg>text=${mailLogin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:37.679681" elapsed="0.126372"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:37.619095" elapsed="0.187162"/>
+</kw>
+<kw name="Passo 3 - Digitar uma senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:37.807117" elapsed="0.040285"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:37.850402" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-11T16:09:37.878303" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordinput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:37.848673" elapsed="0.063144"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:37.806708" elapsed="0.105211"/>
+</kw>
+<kw name="Passo 4 - Clicar em entrar" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomentrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:37.912605" elapsed="0.041568"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:37.954727" level="INFO">Clicking button '//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${buttomentrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:37.954424" elapsed="0.056746"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:37.912179" elapsed="0.099104"/>
+</kw>
+<kw name="Clicar no botão Logout" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttonLogout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:38.011723" elapsed="0.440029"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:38.452160" level="INFO">Clicking button '//button[@class='css-1nvbq2d'][contains(.,'Logout')]'.</msg>
+<arg>locator=${buttonLogout}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:38.451941" elapsed="0.029458"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:38.011497" elapsed="0.470011"/>
+</kw>
+<kw name="Fechar o navegador" owner="FRONT" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-11T16:09:38.481994" elapsed="0.066705"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:38.481768" elapsed="0.067502"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:36.267161" elapsed="2.282281"/>
+</test>
+<status status="PASS" start="2024-05-11T16:09:36.264445" elapsed="2.285489"/>
+</suite>
+<suite id="s1-s3" name="Usuario&amp;Diretoria" source="/home/sami/academy/FRONTacademy/tests/usuario&amp;diretoria.robot">
+<test id="s1-s3-t1" name="CT01: cadastro de usuário" line="8">
+<kw name="Abrir o navegador" owner="FRONT" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:38.553780" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:38.553654" elapsed="0.792145"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-11T16:09:39.346877" elapsed="0.095941"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:38.553422" elapsed="0.889857"/>
+</kw>
+<kw name="Passo 1 - Acessar a página de login do academy" owner="FRONT">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:39.452126" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:39.449918" elapsed="0.447497"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:39.444895" elapsed="0.453527"/>
+</kw>
+<kw name="Passo 2 - Digitar mail" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:39.899677" elapsed="0.069387"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:39.969512" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//input[contains(@type,'text')]'.</msg>
+<arg>locator=${mailInput}</arg>
+<arg>text=${mailLogin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:39.969254" elapsed="0.126503"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:39.899199" elapsed="0.196665"/>
+</kw>
+<kw name="Passo 3 - Digitar uma senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:40.096305" elapsed="0.023878"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:40.120677" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-11T16:09:40.153251" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordinput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:40.120402" elapsed="0.068466"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:40.096078" elapsed="0.092913"/>
+</kw>
+<kw name="Passo 4 - Clicar em entrar" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomentrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:40.189710" elapsed="0.019112"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:40.209420" level="INFO">Clicking button '//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${buttomentrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:40.209032" elapsed="0.075940"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:40.189378" elapsed="0.095711"/>
+</kw>
+<kw name="Passo 5 - Clicar em Cadastros" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${cadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:40.285563" elapsed="0.443405"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:40.729916" level="INFO">Clicking element '//div[contains(@id,'Cadastros')]'.</msg>
+<arg>locator=${cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:40.729413" elapsed="0.049661"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:40.285312" elapsed="0.493966"/>
+</kw>
+<kw name="Passo 6 - Clicar em Usuários" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${usuario}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:40.780086" elapsed="0.040671"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:40.821244" level="INFO">Clicking element '//div[contains(@id,'Usuários')]'.</msg>
+<arg>locator=${usuario}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:40.820967" elapsed="0.043629"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:40.779723" elapsed="0.085020"/>
+</kw>
+<kw name="Passo 7 - Clicar no botão novo cadastro" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomnovocadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:40.865467" elapsed="0.078442"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:40.944320" level="INFO">Clicking button 'Novo Cadastro'.</msg>
+<arg>locator=${buttomnovocadastro}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:40.944098" elapsed="0.066480"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:40.865093" elapsed="0.145651"/>
+</kw>
+<kw name="Passo 8 - Digitar nome completo" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${fullnameImput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.011494" elapsed="0.047345"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:41.060456" level="INFO">Typing text 'Jussara Park' into text field 'fullName'.</msg>
+<arg>locator=${fullnameImput}</arg>
+<arg>text=${nomeesobrenome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.059629" elapsed="0.224611"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:41.011076" elapsed="0.273843"/>
+</kw>
+<kw name="Passo 9 - Digitar e-mail" owner="FRONT">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-05-11T16:09:41.288228" level="INFO">${palavra_randomica} = KSNlHXjg</msg>
+<var>${palavra_randomica}</var>
+<arg>8</arg>
+<arg>chars=[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.287408" elapsed="0.000891"/>
+</kw>
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2024-05-11T16:09:41.288861" level="INFO">${palavra_randomica} = ksnlhxjg</msg>
+<var>${palavra_randomica}</var>
+<arg>${palavra_randomica}</arg>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.288586" elapsed="0.000312"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-11T16:09:41.291795" level="INFO">${EMAIL_TEST} = ksnlhxjg@hotmail.com</msg>
+<arg>${EMAIL_TEST}</arg>
+<arg>${palavra_randomica}@hotmail.com</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.289117" elapsed="0.002818"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-11T16:09:41.292609" level="INFO">ksnlhxjg@hotmail.com</msg>
+<arg>${EMAIL_TEST}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.292334" elapsed="0.000330"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailcadastroInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.292807" elapsed="0.057279"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:41.352782" level="INFO">Typing text 'ksnlhxjg@hotmail.com' into text field 'mail'.</msg>
+<arg>locator=${mailcadastroInput}</arg>
+<arg>text=${EMAIL_TEST}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.351499" elapsed="0.269007"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:41.286442" elapsed="0.334450"/>
+</kw>
+<kw name="Passo 10 - Digitar perfil de acesso" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${accesprofileInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.623318" elapsed="0.048268"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:41.672473" level="INFO">Typing text 'ADMIN' into text field 'accessProfile'.</msg>
+<arg>locator=${accesprofileInput}</arg>
+<arg>text=${administrador}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.672012" elapsed="0.188069"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:41.622229" elapsed="0.238231"/>
+</kw>
+<kw name="Passo 11 - Digitar CPF" owner="FRONT">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-05-11T16:09:41.863842" level="INFO">${cpf_randomico} = 42259644527</msg>
+<var>${cpf_randomico}</var>
+<arg>11</arg>
+<arg>chars=[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.863123" elapsed="0.000784"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-11T16:09:41.866519" level="INFO">${CPF} = 42259644527</msg>
+<arg>${CPF}</arg>
+<arg>${cpf_randomico}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.864277" elapsed="0.002581"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-11T16:09:41.868336" level="INFO">42259644527</msg>
+<arg>${CPF}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.867600" elapsed="0.000860"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${cpfinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.868917" elapsed="0.042694"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:41.913447" level="INFO">Typing text '42259644527' into text field 'cpf'.</msg>
+<arg>locator=${cpfinput}</arg>
+<arg>text=${CPF}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:41.912001" elapsed="0.249684"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:41.861515" elapsed="0.300710"/>
+</kw>
+<kw name="Passo 12 - Digitar senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordcadastroInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:42.166055" elapsed="0.056047"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:42.226186" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-05-11T16:09:42.295505" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordcadastroInput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:42.224823" elapsed="0.276585"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:42.163924" elapsed="0.337902"/>
+</kw>
+<kw name="Passo 13 - Digitar confirmar senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${confirmpassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:42.504801" elapsed="0.050053"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:42.556182" level="INFO">Typing password into text field 'confirmPassword'.</msg>
+<msg time="2024-05-11T16:09:42.625697" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${confirmpassword}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:42.555412" elapsed="0.218344"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:42.502990" elapsed="0.271230"/>
+</kw>
+<kw name="Passo 14 - Clicar no Salvar Novo" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttonsave}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:42.776228" elapsed="0.044852"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:42.821658" level="INFO">Clicking button 'save'.</msg>
+<arg>locator=${buttonsave}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:42.821355" elapsed="0.140125"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:42.775132" elapsed="0.186537"/>
+</kw>
+<kw name="Fechar o navegador" owner="FRONT" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-11T16:09:42.963879" elapsed="0.081180"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:42.962319" elapsed="0.083620"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:38.553072" elapsed="4.496224"/>
+</test>
+<test id="s1-s3-t2" name="CT02 - preencher o campo fullname invalido" line="23">
+<kw name="Abrir o navegador" owner="FRONT" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:43.057103" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:43.055764" elapsed="1.015739"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-11T16:09:44.073023" elapsed="0.090926"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:43.052756" elapsed="1.111440"/>
+</kw>
+<kw name="Passo 1 - Acessar a página de login do academy" owner="FRONT">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:44.170636" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:44.169083" elapsed="0.469391"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:44.166832" elapsed="0.472594"/>
+</kw>
+<kw name="Passo 2 - Digitar mail" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:44.641918" elapsed="0.067833"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:44.710184" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//input[contains(@type,'text')]'.</msg>
+<arg>locator=${mailInput}</arg>
+<arg>text=${mailLogin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:44.709932" elapsed="0.107325"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:44.640630" elapsed="0.176738"/>
+</kw>
+<kw name="Passo 3 - Digitar uma senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:44.817858" elapsed="0.056422"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:44.874785" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-11T16:09:44.897993" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordinput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:44.874505" elapsed="0.059316"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:44.817613" elapsed="0.116394"/>
+</kw>
+<kw name="Passo 4 - Clicar em entrar" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomentrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:44.934723" elapsed="0.020654"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:44.955949" level="INFO">Clicking button '//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${buttomentrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:44.955619" elapsed="0.078356"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:44.934321" elapsed="0.099761"/>
+</kw>
+<kw name="Passo 5 - Clicar em Cadastros" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${cadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:45.034550" elapsed="0.448466"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:45.483534" level="INFO">Clicking element '//div[contains(@id,'Cadastros')]'.</msg>
+<arg>locator=${cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:45.483242" elapsed="0.059498"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:45.034303" elapsed="0.508853"/>
+</kw>
+<kw name="Passo 6 - Clicar em Usuários" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${usuario}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:45.544696" elapsed="0.107183"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:45.653118" level="INFO">Clicking element '//div[contains(@id,'Usuários')]'.</msg>
+<arg>locator=${usuario}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:45.652484" elapsed="0.103530"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:45.543957" elapsed="0.212823"/>
+</kw>
+<kw name="Passo 7 - Clicar no botão novo cadastro" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomnovocadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:45.759379" elapsed="0.338387"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:46.099395" level="INFO">Clicking button 'Novo Cadastro'.</msg>
+<arg>locator=${buttomnovocadastro}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:46.098680" elapsed="0.084152"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:45.758575" elapsed="0.424434"/>
+</kw>
+<kw name="Campo FullName inválido" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${fullnameImput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:46.183750" elapsed="0.073924"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:46.259334" level="INFO">Typing text 'saa saa' into text field 'fullName'.</msg>
+<arg>locator=${fullnameImput}</arg>
+<arg>text=${fullnameinvalido}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:46.258443" elapsed="0.410337"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:46.183356" elapsed="0.486100"/>
+</kw>
+<kw name="Passo 9 - Digitar e-mail" owner="FRONT">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-05-11T16:09:46.671696" level="INFO">${palavra_randomica} = TAWctJwH</msg>
+<var>${palavra_randomica}</var>
+<arg>8</arg>
+<arg>chars=[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-05-11T16:09:46.671132" elapsed="0.000598"/>
+</kw>
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2024-05-11T16:09:46.672014" level="INFO">${palavra_randomica} = tawctjwh</msg>
+<var>${palavra_randomica}</var>
+<arg>${palavra_randomica}</arg>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2024-05-11T16:09:46.671877" elapsed="0.000154"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-11T16:09:46.673580" level="INFO">${EMAIL_TEST} = tawctjwh@hotmail.com</msg>
+<arg>${EMAIL_TEST}</arg>
+<arg>${palavra_randomica}@hotmail.com</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-11T16:09:46.672163" elapsed="0.001513"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-11T16:09:46.673990" level="INFO">tawctjwh@hotmail.com</msg>
+<arg>${EMAIL_TEST}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-11T16:09:46.673851" elapsed="0.000173"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailcadastroInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:46.674120" elapsed="0.050255"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:46.726641" level="INFO">Typing text 'tawctjwh@hotmail.com' into text field 'mail'.</msg>
+<arg>locator=${mailcadastroInput}</arg>
+<arg>text=${EMAIL_TEST}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:46.725170" elapsed="0.251685"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:46.670493" elapsed="0.306635"/>
+</kw>
+<kw name="Passo 10 - Digitar perfil de acesso" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${accesprofileInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:46.979536" elapsed="0.056486"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:47.037141" level="INFO">Typing text 'ADMIN' into text field 'accessProfile'.</msg>
+<arg>locator=${accesprofileInput}</arg>
+<arg>text=${administrador}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:47.036526" elapsed="0.224914"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:46.978159" elapsed="0.283753"/>
+</kw>
+<kw name="Passo 11 - Digitar CPF" owner="FRONT">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-05-11T16:09:47.265871" level="INFO">${cpf_randomico} = 65693103993</msg>
+<var>${cpf_randomico}</var>
+<arg>11</arg>
+<arg>chars=[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-05-11T16:09:47.264111" elapsed="0.001982"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-11T16:09:47.269020" level="INFO">${CPF} = 65693103993</msg>
+<arg>${CPF}</arg>
+<arg>${cpf_randomico}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-11T16:09:47.266557" elapsed="0.002587"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-11T16:09:47.270537" level="INFO">65693103993</msg>
+<arg>${CPF}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-11T16:09:47.269831" elapsed="0.000807"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${cpfinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:47.270920" elapsed="0.056925"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:47.330647" level="INFO">Typing text '65693103993' into text field 'cpf'.</msg>
+<arg>locator=${cpfinput}</arg>
+<arg>text=${CPF}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:47.329453" elapsed="0.230986"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:47.262936" elapsed="0.297714"/>
+</kw>
+<kw name="Passo 12 - Digitar senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordcadastroInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:47.562229" elapsed="0.058070"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:47.622182" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-05-11T16:09:47.698458" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordcadastroInput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:47.621199" elapsed="0.256056"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:47.561220" elapsed="0.316316"/>
+</kw>
+<kw name="Passo 13 - Digitar confirmar senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${confirmpassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:47.878509" elapsed="0.064306"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:47.944433" level="INFO">Typing password into text field 'confirmPassword'.</msg>
+<msg time="2024-05-11T16:09:48.034278" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${confirmpassword}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:47.943356" elapsed="0.286369"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:47.878023" elapsed="0.351999"/>
+</kw>
+<kw name="Passo 14 - Clicar no Salvar Novo" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttonsave}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:48.231994" elapsed="0.056422"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:48.289816" level="INFO">Clicking button 'save'.</msg>
+<arg>locator=${buttonsave}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:48.288995" elapsed="0.196736"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:48.230823" elapsed="0.255965"/>
+</kw>
+<kw name="Fechar o navegador" owner="FRONT" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-11T16:09:48.490561" elapsed="0.166773"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:48.488780" elapsed="0.169167"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:43.050346" elapsed="5.607900"/>
+</test>
+<test id="s1-s3-t3" name="CT03 - preencher o campo email com email invalido" line="38">
+<kw name="Abrir o navegador" owner="FRONT" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:48.664794" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:48.663517" elapsed="1.071400"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-11T16:09:49.736415" elapsed="0.128086"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:48.661798" elapsed="1.203942"/>
+</kw>
+<kw name="Passo 1 - Acessar a página de login do academy" owner="FRONT">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:49.871903" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:49.871136" elapsed="0.878729"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:49.867348" elapsed="0.883034"/>
+</kw>
+<kw name="Passo 2 - Digitar mail" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:50.752097" elapsed="0.120141"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:50.872901" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//input[contains(@type,'text')]'.</msg>
+<arg>locator=${mailInput}</arg>
+<arg>text=${mailLogin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:50.872494" elapsed="0.190035"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:50.751151" elapsed="0.311500"/>
+</kw>
+<kw name="Passo 3 - Digitar uma senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:51.063073" elapsed="0.030805"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:51.095803" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-11T16:09:51.172013" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordinput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:51.095011" elapsed="0.138586"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:51.062850" elapsed="0.171349"/>
+</kw>
+<kw name="Passo 4 - Clicar em entrar" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomentrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:51.236561" elapsed="0.032989"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:51.277074" level="INFO">Clicking button '//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${buttomentrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:51.271644" elapsed="0.192631"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:51.236160" elapsed="0.228769"/>
+</kw>
+<kw name="Passo 5 - Clicar em Cadastros" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${cadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:51.466540" elapsed="0.490738"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:51.957772" level="INFO">Clicking element '//div[contains(@id,'Cadastros')]'.</msg>
+<arg>locator=${cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:51.957512" elapsed="0.077151"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:51.465746" elapsed="0.569601"/>
+</kw>
+<kw name="Passo 6 - Clicar em Usuários" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${usuario}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:52.038213" elapsed="0.071584"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:52.110907" level="INFO">Clicking element '//div[contains(@id,'Usuários')]'.</msg>
+<arg>locator=${usuario}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:52.110361" elapsed="0.107664"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:52.036679" elapsed="0.181616"/>
+</kw>
+<kw name="Passo 7 - Clicar no botão novo cadastro" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomnovocadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:52.220192" elapsed="0.208223"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:52.433014" level="INFO">Clicking button 'Novo Cadastro'.</msg>
+<arg>locator=${buttomnovocadastro}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:52.430475" elapsed="0.178900"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:52.218835" elapsed="0.390709"/>
+</kw>
+<kw name="Passo 8 - Digitar nome completo" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${fullnameImput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:52.610339" elapsed="0.069424"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:52.681113" level="INFO">Typing text 'Jussara Park' into text field 'fullName'.</msg>
+<arg>locator=${fullnameImput}</arg>
+<arg>text=${nomeesobrenome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:52.680487" elapsed="0.430369"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:52.609830" elapsed="0.501456"/>
+</kw>
+<kw name="Digitar email invalido do usuário" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailcadastroInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:53.112371" elapsed="0.055759"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:53.169803" level="INFO">Typing text 'sasa.com' into text field 'mail'.</msg>
+<arg>locator=${mailcadastroInput}</arg>
+<arg>text=${emailinvalidousu}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:53.169031" elapsed="0.266012"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:53.111899" elapsed="0.323669"/>
+</kw>
+<kw name="Passo 10 - Digitar perfil de acesso" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${accesprofileInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:53.439210" elapsed="0.059439"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:53.501007" level="INFO">Typing text 'ADMIN' into text field 'accessProfile'.</msg>
+<arg>locator=${accesprofileInput}</arg>
+<arg>text=${administrador}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:53.499565" elapsed="0.254594"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:53.437090" elapsed="0.318000"/>
+</kw>
+<kw name="Passo 11 - Digitar CPF" owner="FRONT">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-05-11T16:09:53.758390" level="INFO">${cpf_randomico} = 70325735430</msg>
+<var>${cpf_randomico}</var>
+<arg>11</arg>
+<arg>chars=[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-05-11T16:09:53.757592" elapsed="0.000866"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-11T16:09:53.761148" level="INFO">${CPF} = 70325735430</msg>
+<arg>${CPF}</arg>
+<arg>${cpf_randomico}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-11T16:09:53.758796" elapsed="0.002587"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-11T16:09:53.762524" level="INFO">70325735430</msg>
+<arg>${CPF}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-11T16:09:53.761957" elapsed="0.000728"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${cpfinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:53.763340" elapsed="0.065819"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:53.830361" level="INFO">Typing text '70325735430' into text field 'cpf'.</msg>
+<arg>locator=${cpfinput}</arg>
+<arg>text=${CPF}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:53.829547" elapsed="0.249789"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:53.756192" elapsed="0.323501"/>
+</kw>
+<kw name="Passo 12 - Digitar senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordcadastroInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:54.081328" elapsed="0.196028"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:54.279753" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-05-11T16:09:54.343852" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordcadastroInput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:54.278655" elapsed="0.198151"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:54.080427" elapsed="0.396652"/>
+</kw>
+<kw name="Passo 13 - Digitar confirmar senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${confirmpassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:54.479443" elapsed="0.063723"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:54.545834" level="INFO">Typing password into text field 'confirmPassword'.</msg>
+<msg time="2024-05-11T16:09:54.608839" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${confirmpassword}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:54.544228" elapsed="0.218317"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:54.478270" elapsed="0.284680"/>
+</kw>
+<kw name="Clicar no botão salvar novo usuario" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttonsave}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:54.764373" elapsed="0.053736"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:54.819303" level="INFO">Clicking button 'save'.</msg>
+<arg>locator=${buttonsave}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:54.818378" elapsed="0.163178"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:55.301035" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-30.png"&gt;&lt;img src="selenium-element-screenshot-30.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>locator=${teladocadastrodousuario}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-05-11T16:09:54.981950" elapsed="0.320102"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:54.763388" elapsed="0.540085"/>
+</kw>
+<kw name="Fechar o navegador" owner="FRONT" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-11T16:09:55.307912" elapsed="0.094255"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:55.306527" elapsed="0.096101"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:48.659158" elapsed="6.743964"/>
+</test>
+<test id="s1-s3-t4" name="CT04 - campos obrigatorios em branco" line="54">
+<kw name="Abrir o navegador" owner="FRONT" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:55.408270" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:55.407285" elapsed="0.914268"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-11T16:09:56.321714" elapsed="0.034422"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:55.405772" elapsed="0.950598"/>
+</kw>
+<kw name="Passo 1 - Acessar a página de login do academy" owner="FRONT">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:56.357792" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:09:56.357427" elapsed="0.331754"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:56.356824" elapsed="0.332504"/>
+</kw>
+<kw name="Passo 2 - Digitar mail" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:56.690397" elapsed="0.051515"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:56.742462" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//input[contains(@type,'text')]'.</msg>
+<arg>locator=${mailInput}</arg>
+<arg>text=${mailLogin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:56.742162" elapsed="0.124203"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:56.689719" elapsed="0.176844"/>
+</kw>
+<kw name="Passo 3 - Digitar uma senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:56.867213" elapsed="0.020119"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:56.888214" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-11T16:09:56.919944" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordinput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:56.887591" elapsed="0.067902"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:56.866852" elapsed="0.088742"/>
+</kw>
+<kw name="Passo 4 - Clicar em entrar" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomentrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:56.956121" elapsed="0.040544"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:56.997086" level="INFO">Clicking button '//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${buttomentrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:56.996853" elapsed="0.052529"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:56.955816" elapsed="0.093738"/>
+</kw>
+<kw name="Passo 5 - Clicar em Cadastros" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:57.576436" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<arg>locator=${cadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:57.050225" elapsed="0.776964"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:57.829561" level="INFO">Clicking element '//div[contains(@id,'Cadastros')]'.</msg>
+<arg>locator=${cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:57.828370" elapsed="0.162635"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:57.049896" elapsed="0.941562"/>
+</kw>
+<kw name="Passo 6 - Clicar em Usuários" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${usuario}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:57.993713" elapsed="0.099571"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:58.096131" level="INFO">Clicking element '//div[contains(@id,'Usuários')]'.</msg>
+<arg>locator=${usuario}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:58.094872" elapsed="0.159188"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:57.992364" elapsed="0.262761"/>
+</kw>
+<kw name="Passo 7 - Clicar no botão novo cadastro" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomnovocadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:58.258633" elapsed="0.219965"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:58.482633" level="INFO">Clicking button 'Novo Cadastro'.</msg>
+<arg>locator=${buttomnovocadastro}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:58.480000" elapsed="0.169079"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:58.256719" elapsed="0.392559"/>
+</kw>
+<kw name="FullName em branco" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${fullnameImput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:58.649993" elapsed="0.138481"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:58.789686" level="INFO">Typing text '' into text field 'fullName'.</msg>
+<arg>locator=${fullnameImput}</arg>
+<arg>text=</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:58.788885" elapsed="0.224634"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:58.649614" elapsed="0.364216"/>
+</kw>
+<kw name=" Email em branco" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailcadastroInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:59.015725" elapsed="0.070369"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:59.089215" level="INFO">Typing text '' into text field 'mail'.</msg>
+<arg>locator=${mailcadastroInput}</arg>
+<arg>text=</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:59.087402" elapsed="0.150026"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:59.014747" elapsed="0.223562"/>
+</kw>
+<kw name="Perfil de acesso em branco" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${accesprofileInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:59.240471" elapsed="0.053431"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:59.296179" level="INFO">Typing text '' into text field 'accessProfile'.</msg>
+<arg>locator=${accesprofileInput}</arg>
+<arg>text=</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:59.294964" elapsed="0.160123"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:59.239551" elapsed="0.216142"/>
+</kw>
+<kw name="CPF em branco" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${cpfinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:59.457782" elapsed="0.052003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:59.510841" level="INFO">Typing text '' into text field 'cpf'.</msg>
+<arg>locator=${cpfinput}</arg>
+<arg>text=</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:59.510369" elapsed="0.187698"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:59.456811" elapsed="0.241617"/>
+</kw>
+<kw name="Senha em branco" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordcadastroInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:59.700160" elapsed="0.055097"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:59.757103" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-05-11T16:09:59.802607" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordcadastroInput}</arg>
+<arg>password=</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:59.756364" elapsed="0.169918"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:59.699141" elapsed="0.227396"/>
+</kw>
+<kw name="Confimar senha branco" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${confirmpassword}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:09:59.927822" elapsed="0.058693"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:09:59.988689" level="INFO">Typing password into text field 'confirmPassword'.</msg>
+<msg time="2024-05-11T16:10:00.067610" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${confirmpassword}</arg>
+<arg>password=</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:09:59.987377" elapsed="0.183217"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:59.927025" elapsed="0.243974"/>
+</kw>
+<kw name="Clicar no botão salvar novo usuario" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttonsave}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:00.173338" elapsed="0.055694"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:00.229927" level="INFO">Clicking button 'save'.</msg>
+<arg>locator=${buttonsave}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:00.229466" elapsed="0.220851"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:00.639929" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-31.png"&gt;&lt;img src="selenium-element-screenshot-31.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>locator=${teladocadastrodousuario}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-05-11T16:10:00.451620" elapsed="0.188463"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:00.172118" elapsed="0.468098"/>
+</kw>
+<kw name="Fechar o navegador" owner="FRONT" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-11T16:10:00.641424" elapsed="0.116123"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:00.640829" elapsed="0.117433"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:09:55.404550" elapsed="5.354169"/>
+</test>
+<test id="s1-s3-t5" name="CT05 - cadastrar diretoria" line="69">
+<kw name="Abrir o navegador" owner="FRONT" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:00.762339" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:10:00.761837" elapsed="0.705085"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-11T16:10:01.467190" elapsed="0.042454"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:00.761226" elapsed="0.748718"/>
+</kw>
+<kw name="Passo 1 - Acessar a página de login do academy" owner="FRONT">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:01.513481" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:10:01.512833" elapsed="0.447015"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:01.511189" elapsed="0.449488"/>
+</kw>
+<kw name="Passo 2 - Digitar mail" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:01.961871" elapsed="0.099196"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:02.062776" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//input[contains(@type,'text')]'.</msg>
+<arg>locator=${mailInput}</arg>
+<arg>text=${mailLogin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:02.061823" elapsed="0.185230"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:01.961227" elapsed="0.285932"/>
+</kw>
+<kw name="Passo 3 - Digitar uma senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:02.247587" elapsed="0.054454"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:02.302939" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-11T16:10:02.329705" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordinput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:02.302268" elapsed="0.072232"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:02.247357" elapsed="0.127497"/>
+</kw>
+<kw name="Passo 4 - Clicar em entrar" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomentrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:02.376312" elapsed="0.035380"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:02.413605" level="INFO">Clicking button '//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${buttomentrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:02.412832" elapsed="0.051225"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:02.375809" elapsed="0.088431"/>
+</kw>
+<kw name="Passo 5 - Clicar em Cadastros" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${cadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:02.464880" elapsed="0.446664"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:02.911934" level="INFO">Clicking element '//div[contains(@id,'Cadastros')]'.</msg>
+<arg>locator=${cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:02.911715" elapsed="0.036824"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:02.464535" elapsed="0.484202"/>
+</kw>
+<kw name="Clicar em diretorias" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${diretoria}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:02.949463" elapsed="0.047344"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:02.997640" level="INFO">Clicking element '//span[@class='MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-yb0lig'][contains(.,'Diretorias')]'.</msg>
+<arg>locator=${diretoria}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:02.997221" elapsed="0.067089"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:02.949070" elapsed="0.115442"/>
+</kw>
+<kw name="Clicar em novo cadastro" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${novocadastrobuttomdire}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.066542" elapsed="0.147326"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:03.214562" level="INFO">Clicking button 'Novo Cadastro'.</msg>
+<arg>locator=${novocadastrobuttomdire}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.214264" elapsed="0.088887"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:03.064937" elapsed="0.238456"/>
+</kw>
+<kw name="digitar dados da diretoria" owner="FRONT">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-05-11T16:10:03.304314" level="INFO">${board_randomica} = iJjYxZME</msg>
+<var>${board_randomica}</var>
+<arg>8</arg>
+<arg>chars=[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.304108" elapsed="0.000231"/>
+</kw>
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2024-05-11T16:10:03.304559" level="INFO">${board_randomica} = ijjyxzme</msg>
+<var>${board_randomica}</var>
+<arg>${board_randomica}</arg>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.304443" elapsed="0.000134"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-11T16:10:03.305436" level="INFO">${nomedoboard} = ijjyxzme</msg>
+<arg>${nomedoboard}</arg>
+<arg>${board_randomica}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.304681" elapsed="0.000794"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-11T16:10:03.305672" level="INFO">ijjyxzme</msg>
+<arg>${nomedoboard}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.305575" elapsed="0.000129"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${boardname}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.305788" elapsed="0.040849"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:03.350307" level="INFO">Typing text 'ijjyxzme' into text field 'boardName'.</msg>
+<arg>locator=${boardname}</arg>
+<arg>text=${nomedoboard}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.348291" elapsed="0.414529"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:03.303796" elapsed="0.459230"/>
+</kw>
+<kw name="Clicar no botão salvar novo" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${bottonsalvarnovo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.764138" elapsed="0.048012"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:03.813377" level="INFO">Clicking button 'save'.</msg>
+<arg>locator=${bottonsalvarnovo}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.812444" elapsed="0.143598"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:03.763642" elapsed="0.193495"/>
+</kw>
+<kw name="Fechar o navegador" owner="FRONT" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-11T16:10:03.959825" elapsed="0.088932"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:03.958593" elapsed="0.091069"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:00.759864" elapsed="3.290227"/>
+</test>
+<test id="s1-s3-t6" name="CT06 - Editar diretorias" line="79">
+<kw name="Abrir o navegador" owner="FRONT" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:04.054001" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:10:04.053280" elapsed="0.701656"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-11T16:10:04.755100" elapsed="0.025753"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:04.052320" elapsed="0.728767"/>
+</kw>
+<kw name="Passo 1 - Acessar a página de login do academy" owner="FRONT">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:04.784416" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-11T16:10:04.783588" elapsed="0.464594"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:04.782617" elapsed="0.466182"/>
+</kw>
+<kw name="Passo 2 - Digitar mail" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${mailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:05.251246" elapsed="0.100975"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:05.352792" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//input[contains(@type,'text')]'.</msg>
+<arg>locator=${mailInput}</arg>
+<arg>text=${mailLogin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:05.352443" elapsed="0.198390"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:05.249882" elapsed="0.301064"/>
+</kw>
+<kw name="Passo 3 - Digitar uma senha" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${passwordinput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:05.552243" elapsed="0.047094"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:05.601332" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-11T16:10:05.639111" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${passwordinput}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:05.600203" elapsed="0.088019"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:05.551175" elapsed="0.137186"/>
+</kw>
+<kw name="Passo 4 - Clicar em entrar" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomentrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:05.688921" elapsed="0.029714"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:05.721652" level="INFO">Clicking button '//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]'.</msg>
+<arg>locator=${buttomentrar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:05.719682" elapsed="0.072488"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:05.688646" elapsed="0.104112"/>
+</kw>
+<kw name="Passo 5 - Clicar em Cadastros" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${cadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:05.793737" elapsed="0.443965"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:06.238641" level="INFO">Clicking element '//div[contains(@id,'Cadastros')]'.</msg>
+<arg>locator=${cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.238157" elapsed="0.034639"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:05.793252" elapsed="0.480126"/>
+</kw>
+<kw name="Clicar em diretorias" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${diretoria}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.275526" elapsed="0.029829"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:06.305750" level="INFO">Clicking element '//span[@class='MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-yb0lig'][contains(.,'Diretorias')]'.</msg>
+<arg>locator=${diretoria}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.305537" elapsed="0.037289"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:06.274492" elapsed="0.068439"/>
+</kw>
+<kw name="Clicar no editar" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttoneditar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.343428" elapsed="0.432273"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:06.776158" level="INFO">Clicking button '(//button[contains(@id,'edit')])[1]'.</msg>
+<arg>locator=${buttoneditar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.775877" elapsed="0.043544"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:06.343134" elapsed="0.476399"/>
+</kw>
+<kw name="Alterar o dado do cadastro" owner="FRONT">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-05-11T16:10:06.820205" level="INFO">${editar_randomica} = RyIbxhYa</msg>
+<var>${editar_randomica}</var>
+<arg>8</arg>
+<arg>chars=[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.820015" elapsed="0.000215"/>
+</kw>
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2024-05-11T16:10:06.820458" level="INFO">${editar_randomica} = ryibxhya</msg>
+<var>${editar_randomica}</var>
+<arg>${editar_randomica}</arg>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.820340" elapsed="0.000138"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-11T16:10:06.821446" level="INFO">${editardoboard} = ryibxhya</msg>
+<arg>${editardoboard}</arg>
+<arg>${editar_randomica}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.820565" elapsed="0.000945"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-11T16:10:06.821775" level="INFO">ryibxhya</msg>
+<arg>${editardoboard}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.821643" elapsed="0.000169"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${editardiretoria}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.821899" elapsed="0.037003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:06.860285" level="INFO">Typing text 'ryibxhya' into text field 'boardName'.</msg>
+<arg>locator=${editardiretoria}</arg>
+<arg>text=${editardoboard}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:06.859344" elapsed="0.295702"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${editardiretoria}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:07.156090" elapsed="0.142386"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:07.301796" level="INFO">Typing text 'ryibxhya' into text field 'boardName'.</msg>
+<arg>locator=${editardiretoria}</arg>
+<arg>text=${editardoboard}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:07.299681" elapsed="0.217826"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:06.819778" elapsed="0.698983"/>
+</kw>
+<kw name="Clicar em salvar alterações" owner="FRONT">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${buttomsalvaralteracao}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-11T16:10:07.520657" elapsed="0.056886"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-11T16:10:07.579935" level="INFO">Clicking button 'save'.</msg>
+<arg>locator=${buttomsalvaralteracao}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-11T16:10:07.578650" elapsed="0.106447"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:07.519966" elapsed="0.165283"/>
+</kw>
+<kw name="Fechar o navegador" owner="FRONT" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-11T16:10:07.686739" elapsed="0.080032"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:07.686077" elapsed="0.081835"/>
+</kw>
+<status status="PASS" start="2024-05-11T16:10:04.051351" elapsed="3.717238"/>
+</test>
+<status status="PASS" start="2024-05-11T16:09:38.550377" elapsed="29.220725"/>
+</suite>
+<status status="PASS" start="2024-05-11T16:08:21.004528" elapsed="106.768651"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Login">Tests.Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Logout">Tests.Logout</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s3" name="Usuario&amp;Diretoria">Tests.Usuario&amp;Diretoria</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
