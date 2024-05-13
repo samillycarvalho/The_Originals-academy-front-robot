@@ -6,7 +6,7 @@ ${password}     1234@Test
 ${mailInput}                   //input[contains(@type,'text')] 
 ${passwordinput}               //input[contains(@type,'password')]
 ${buttomentrar}                //button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]
-${cadastro}                   //div[contains(@id,'Cadastros')]
+${cadastro}                   //div[@id='Cadastros']/../..//div[@role='button']
 ${usuario}                    //div[contains(@id,'Usuários')]
 ${buttomnovocadastro}          Novo Cadastro
 ${fullnameImput}               fullName

@@ -29,12 +29,12 @@ Passo 3 - Digitar uma senha
 Passo 4 - Clicar em entrar   
   Wait Until Element Is Visible    locator=${buttomentrar} 
    Click Button      locator=${buttomentrar} 
-   
+   Sleep  3s
 
 Passo 5 - Clicar em Cadastros   
    Wait Until Element Is Visible   locator=${cadastro}
    Click Element                  locator=${cadastro}
-    
+   
 Passo 6 - Clicar em Usuários  
     Wait Until Element Is Visible   locator=${usuario}
     Click Element   locator=${usuario}
