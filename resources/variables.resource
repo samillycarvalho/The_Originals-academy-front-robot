@@ -30,7 +30,7 @@ ${editarbuttonsaveusuario}     save
 ${buttonLogout}                //button[@class='css-1nvbq2d'][contains(.,'Logout')]
 ${telalogin}                  //form[contains(., 'Login') or contains(., 'Entrar')]
 ${teladocadastrodousuario}                //div[contains(@class, 'css-1gibqcr')]
-
+${urlhome}                    https://automacao.qacoders-academy.com.br/home
 # Usuário
 ${nomeesobrenome}              Jussara Park        
 ${administrador}               ADMIN
