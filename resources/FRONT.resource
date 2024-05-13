@@ -191,3 +191,9 @@ Clicar no botão salvar novo usuario
     Wait Until Element Is Visible   locator=${buttonsave} 
     Click Button    locator=${buttonsave}
     Capture Element Screenshot          locator=${teladocadastrodousuario} 
+
+Senha inválida do login    
+    Wait Until Element Is Visible   locator=${passwordinput} 
+    Input Password                  locator=${passwordinput}     password=123teste
+    Capture Element Screenshot          locator=${telalogin} 
+
