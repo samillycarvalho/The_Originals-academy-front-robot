@@ -17,3 +17,9 @@ CT02 - Digitar email inválido
     Digitar email inválido de login
     Passo 3 - Digitar uma senha
     Passo 4 - Clicar em entrar 
+
+CT03 - Senha inválida
+   Passo 1 - Acessar a página de login do academy
+   Passo 2 - Digitar mail
+   Senha inválida do login  
+   Passo 4 - Clicar em entrar 
