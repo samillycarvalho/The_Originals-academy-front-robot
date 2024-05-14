@@ -54,7 +54,7 @@ code .
 #### ou execute todos os testes como no exemplo abaixo:
 ```jsx
 
- robot -d resuts ./tests/
+ robot -d results ./tests/
 ```
 ## Resultados
 ![alt text](image.png)
