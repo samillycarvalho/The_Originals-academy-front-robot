@@ -18,11 +18,10 @@ jobs:
          
           pip install robotframework-seleniumlibrary
 
- 
       - name: Run Robot Framework tests
         # run: echo Executando os testes de API do Robot
-        run: |
-          robot  ./tests/
+        run: robot tests/
+
       - name: Test Report
         # run: echo Salvando o Report dos Testes
         uses: actions/upload-artifact@v4
